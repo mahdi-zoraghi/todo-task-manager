@@ -1,0 +1,33 @@
+.app {
+  width: 80%;
+  height: 90vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .app * {
+    height: 100%;
+  }
+
+  .app__wrapper {
+    display: flex;
+    padding: 8px;
+  }
+
+  .app__sidebar {
+    // flex: 0.3;
+    flex: 0.4;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #d3deeb !important;
+    border-right: 1.5px solid #565d70;
+  }
+
+  .app__main {
+    // flex: 0.7;
+    flex: 0.8;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
