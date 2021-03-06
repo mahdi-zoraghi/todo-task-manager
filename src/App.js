@@ -1,5 +1,8 @@
 import Card from "./components/Card/Card"
+
 import Sidebar from "./components/Sidebar/Sidebar"
+import Header from "./components/Header/Header"
+import Main from "./components/Main/Main"
 
 import "./App.scss"
 
@@ -10,7 +13,10 @@ function App() {
         <Card className="app__sidebar">
           <Sidebar />
         </Card>
-        <Card className="app__main">Main</Card>
+        <Card className="app__main">
+          <Header />
+          {/* <Main /> */}
+        </Card>
       </Card>
     </div>
   )

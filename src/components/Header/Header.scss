@@ -1,0 +1,110 @@
+.header {
+  height: 30%;
+  width: 98%;
+  background-color: #eaeef3;
+  //   box-shadow: 3px 1px 10px rgba($color: #000000, $alpha: 0.5);
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 0px 4px 25px -2px rgba($color: #000000, $alpha: 0.5);
+  position: relative;
+  .headerNav {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    & > div:nth-child(1) {
+      flex: 0.5;
+      position: relative;
+      span {
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        left: 30px;
+      }
+    }
+
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      & > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+
+        & > span:nth-child(1) {
+          font-weight: bold;
+          font-size: 15px;
+        }
+        & > span:nth-child(2) {
+          font-size: 12px;
+          color: gray;
+        }
+      }
+
+      & > div:nth-child(2) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    & > div:nth-child(3) {
+      padding-right: 20px;
+    }
+
+    .headerNav__inputWrapper {
+      flex: 1;
+      background-color: #e3e3e3;
+      padding: 5px;
+      border-radius: 30px !important;
+      box-shadow: 0px 4px 25px -2px rgba($color: #000000, $alpha: 0.5);
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      border: none !important;
+
+      input,
+      fieldset {
+        border: none !important;
+      }
+    }
+
+    .search__iconWrapper {
+      box-shadow: 2px 2px 20px rgba($color: #000000, $alpha: 0.4);
+      border-radius: 40px;
+      text-transform: inherit;
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba($color: gray, $alpha: 0.5) !important;
+      color: rgba($color: #000000, $alpha: 0.5);
+      padding: 2px;
+      background-color: transparent;
+    }
+
+    .arrowIcon {
+      border-radius: 40px !important;
+      background-color: rgba($color: gray, $alpha: 0.5) !important;
+      color: rgba($color: #000000, $alpha: 0.5) !important;
+      padding: 5px !important;
+    }
+  }
+
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: -75px;
+    border-radius: 0 0 20px 20px;
+
+    div {
+      padding: 35px;
+    }
+  }
+}
