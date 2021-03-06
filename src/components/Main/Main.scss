@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: auto;
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+.item {
+  background-color: #fff;
+  flex-grow: 1;
+  width: 110px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #e3e3e3;
+}

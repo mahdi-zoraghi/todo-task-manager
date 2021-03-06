@@ -15,7 +15,7 @@ function App() {
         </Card>
         <Card className="app__main">
           <Header />
-          {/* <Main /> */}
+          <Main />
         </Card>
       </Card>
     </div>
