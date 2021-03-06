@@ -2,7 +2,7 @@ import { Radio } from "@material-ui/core"
 
 const TaskItem = ({ id, body, date }) => {
   return (
-    <main>
+    <main className="taskItem">
       <label>
         <Radio color="primary" />
         <div>

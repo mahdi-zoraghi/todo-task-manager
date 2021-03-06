@@ -22,7 +22,16 @@ const HeaderNav = () => {
           </IconButton>
           <span>Day</span>
           <span>Week</span>
-          <span>Month</span>
+          <span
+            style={{
+              color: "#fff",
+              backgroundColor: "#ea9165",
+              borderRadius: "10px",
+              padding: "2px 8px",
+            }}
+          >
+            Month
+          </span>
           <IconButton size="small" className="arrowIcon">
             <ArrowForwardIosIcon fontSize="small" />
           </IconButton>
