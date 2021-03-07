@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 import {
   Button,
   Modal as MaterialModal,
@@ -11,17 +12,43 @@ import {
 } from "@material-ui/pickers"
 import DateFansUtils from "@date-io/date-fns"
 
+import { addTask } from "../../store/actions"
+
 import "./Modal.scss"
 
 const Modal = ({ children, ...props }) => {
+  const [input, setInput] = useState("")
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString())
 
+  const dispatch = useDispatch()
+
   const handleDateChange = date => setSelectedDate(date)
+
+  const handleCreateTask = e => {
+    e.preventDefault()
+
+    if (input && selectedDate) {
+      dispatch(
+        addTask({
+          body: input,
+          date: selectedDate,
+        })
+      )
+      props.onClose()
+      setInput("")
+      setSelectedDate(new Date().toISOString())
+    }
+  }
 
   return (
     <MaterialModal {...props} className={`modal ${props.className}`}>
       <Paper className="modalPaper">
-        <TextField variant="outlined" placeholder="Type Your Task..." />
+        <TextField
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          variant="outlined"
+          placeholder="Type Your Task..."
+        />
         <MuiPickersUtilsProvider utils={DateFansUtils}>
           <KeyboardDatePicker
             disableToolbar
@@ -36,7 +63,7 @@ const Modal = ({ children, ...props }) => {
             }}
           />
         </MuiPickersUtilsProvider>
-        <Button color="primary" variant="contained">
+        <Button onClick={handleCreateTask} color="primary" variant="contained">
           Add Task
         </Button>
       </Paper>
