@@ -1,19 +1,22 @@
 .main {
   width: 95%;
-  height: 65%;
-  margin: auto;
+  height: 58%;
+  // margin: auto;
   margin-top: 60px;
-  margin-left: 25px;
+  margin-left: 10px;
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
 }
 
 .item {
-  background-color: #fff;
   width: 110px;
-  padding: 30px;
+  padding: 35px;
+  padding-top: 10px;
   text-align: center;
   border: 1px solid #e3e3e3;
 }
 
 .row {
   display: flex;
+  flex-grow: 1;
 }
