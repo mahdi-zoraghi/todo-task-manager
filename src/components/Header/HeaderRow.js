@@ -1,7 +1,3 @@
-import { Box } from "@material-ui/core"
-
-import Card from "../Card/Card"
-
 const HeaderRow = () => {
   return (
     <section className="headerRow">
